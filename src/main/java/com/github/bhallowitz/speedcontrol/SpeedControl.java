@@ -26,15 +26,19 @@ public class SpeedControl extends JavaPlugin
 	
 	
 	//Plugin enabled message
+	@Override
 	public void onEnable()
 	{
-		logger.info("Speed Control v1.0 by bhallowitz has been: ENABLED");
+		//The Server already has enable messages, you're doubling up here
+		//logger.info("Speed Control v1.0 by bhallowitz has been: ENABLED");
 	}
 	
 	//Plugin disabled message
+	@Override
 	public void onDisable()
 	{
-		logger.info("Speed Control v1.0 by bhallowitz has been: DISABLED");
+		//The Server already has disable messages, you're doubling up here
+		//logger.info("Speed Control v1.0 by bhallowitz has been: DISABLED");
 	}
 	
 	//The good stuff
