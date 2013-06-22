@@ -1,0 +1,6 @@
+name: SpeedControl
+main: com.github.bhallowitz.speedcontrol.SpeedControl
+version: 1.0
+commands:
+    speed:
+        description: Base command for the Speed Control plugin.
