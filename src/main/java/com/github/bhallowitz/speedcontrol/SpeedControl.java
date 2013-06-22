@@ -26,19 +26,15 @@ public class SpeedControl extends JavaPlugin
 	
 	
 	//Plugin enabled message
-	@Override
 	public void onEnable()
 	{
-		//The Server already has enable messages, you're doubling up here
-		//logger.info("Speed Control v1.0 by bhallowitz has been: ENABLED");
+		logger.info("Speed Control v1.0 by bhallowitz has been: ENABLED");
 	}
 	
 	//Plugin disabled message
-	@Override
 	public void onDisable()
 	{
-		//The Server already has disable messages, you're doubling up here
-		//logger.info("Speed Control v1.0 by bhallowitz has been: DISABLED");
+		logger.info("Speed Control v1.0 by bhallowitz has been: DISABLED");
 	}
 	
 	//The good stuff
@@ -62,100 +58,111 @@ public class SpeedControl extends JavaPlugin
 			else
 			//See how fast the player wishes to travel and set their speed accordingly
 			{
-			//Speed 10
-			if(args[0].equalsIgnoreCase("10"))
-				
-			{
+				float speed = 0;
+				try {
+					speed = Float.parseFloat(args[0]);
+				}catch(Exception e) {
+					return false;
+				}
 				Player player = (Player) sender;
 				
-				player.setWalkSpeed(1);
-				player.sendMessage(ChatColor.GOLD + "Your walk speed has been set to 10");
-			}
-			//Speed 9
-			else if(args[0].equalsIgnoreCase("9"))
+				player.setWalkSpeed(speed/10);
+				player.sendMessage(ChatColor.GOLD + "Your walk speed has been set to "+speed);
 				
-			{
-				Player player = (Player) sender;
-				
-				player.setWalkSpeed((float) 0.9);
-				player.sendMessage(ChatColor.GOLD + "Your walk speed has been set to 9");
-			}
-			//speed 8
-			else if(args[0].equalsIgnoreCase("8"))
-				
-			{
-				Player player = (Player) sender;
-				
-				player.setWalkSpeed((float) 0.8);
-				player.sendMessage(ChatColor.GOLD + "Your walk speed has been set to 8");
-			}
-			//Speed 7
-			else if(args[0].equalsIgnoreCase("7"))
-	
-			{
-				Player player = (Player) sender;
-	
-				player.setWalkSpeed((float) 0.7);
-				player.sendMessage(ChatColor.GOLD + "Your walk speed has been set to 7");
-			}
-			//Speed 6
-			else if(args[0].equalsIgnoreCase("6"))
-	
-			{
-				Player player = (Player) sender;
-	
-				player.setWalkSpeed((float) 0.6);
-				player.sendMessage(ChatColor.GOLD + "Your walk speed has been set to 6");
-			}
-			//Speed 5
-			else if(args[0].equalsIgnoreCase("5"))
-	
-			{
-				Player player = (Player) sender;
-	
-				player.setWalkSpeed((float) 0.5);
-				player.sendMessage(ChatColor.GOLD + "Your walk speed has been set to 5");
-			}
-			//Speed 4
-			else if(args[0].equalsIgnoreCase("4"))
-	
-			{
-				Player player = (Player) sender;
-	
-				player.setWalkSpeed((float) 0.4);
-				player.sendMessage(ChatColor.GOLD + "Your walk speed has been set to 4");
-			}
-			//Speed 3
-			else if(args[0].equalsIgnoreCase("3"))
-	
-			{
-				Player player = (Player) sender;
-	
-				player.setWalkSpeed((float) 0.3);
-				player.sendMessage(ChatColor.GOLD + "Your walk speed has been set to 3");
-			}
-			//Speed 2
-			else if(args[0].equalsIgnoreCase("2"))
-	
-			{
-				Player player = (Player) sender;
-	
-				player.setWalkSpeed((float) 0.2);
-				player.sendMessage(ChatColor.GOLD + "Your walk speed has been set to 2");
-			}
-			//Speed 1
-			else if(args[0].equalsIgnoreCase("1"))
-	
-			{
-				Player player = (Player) sender;
-	
-				player.setWalkSpeed((float) 0.1);
-				player.sendMessage(ChatColor.GOLD + "Your walk speed has been set to 1");
-			}
-			else
-			{
-				sender.sendMessage(ChatColor.RED + "Unkown speed setting. Type /speed help for correct usage.");
-			}
+//				//Speed 10
+//				if(args[0].equalsIgnoreCase("10"))
+//					
+//				{
+//					Player player = (Player) sender;
+//					
+//					player.setWalkSpeed(1);
+//					player.sendMessage(ChatColor.GOLD + "Your walk speed has been set to 10");
+//				}
+//				//Speed 9
+//				else if(args[0].equalsIgnoreCase("9"))
+//					
+//				{
+//					Player player = (Player) sender;
+//					
+//					player.setWalkSpeed((float) 0.9);
+//					player.sendMessage(ChatColor.GOLD + "Your walk speed has been set to 9");
+//				}
+//				//speed 8
+//				else if(args[0].equalsIgnoreCase("8"))
+//					
+//				{
+//					Player player = (Player) sender;
+//					
+//					player.setWalkSpeed((float) 0.8);
+//					player.sendMessage(ChatColor.GOLD + "Your walk speed has been set to 8");
+//				}
+//				//Speed 7
+//				else if(args[0].equalsIgnoreCase("7"))
+//		
+//				{
+//					Player player = (Player) sender;
+//		
+//					player.setWalkSpeed((float) 0.7);
+//					player.sendMessage(ChatColor.GOLD + "Your walk speed has been set to 7");
+//				}
+//				//Speed 6
+//				else if(args[0].equalsIgnoreCase("6"))
+//		
+//				{
+//					Player player = (Player) sender;
+//		
+//					player.setWalkSpeed((float) 0.6);
+//					player.sendMessage(ChatColor.GOLD + "Your walk speed has been set to 6");
+//				}
+//				//Speed 5
+//				else if(args[0].equalsIgnoreCase("5"))
+//		
+//				{
+//					Player player = (Player) sender;
+//		
+//					player.setWalkSpeed((float) 0.5);
+//					player.sendMessage(ChatColor.GOLD + "Your walk speed has been set to 5");
+//				}
+//				//Speed 4
+//				else if(args[0].equalsIgnoreCase("4"))
+//		
+//				{
+//					Player player = (Player) sender;
+//		
+//					player.setWalkSpeed((float) 0.4);
+//					player.sendMessage(ChatColor.GOLD + "Your walk speed has been set to 4");
+//				}
+//				//Speed 3
+//				else if(args[0].equalsIgnoreCase("3"))
+//		
+//				{
+//					Player player = (Player) sender;
+//		
+//					player.setWalkSpeed((float) 0.3);
+//					player.sendMessage(ChatColor.GOLD + "Your walk speed has been set to 3");
+//				}
+//				//Speed 2
+//				else if(args[0].equalsIgnoreCase("2"))
+//		
+//				{
+//					Player player = (Player) sender;
+//		
+//					player.setWalkSpeed((float) 0.2);
+//					player.sendMessage(ChatColor.GOLD + "Your walk speed has been set to 2");
+//				}
+//				//Speed 1
+//				else if(args[0].equalsIgnoreCase("1"))
+//		
+//				{
+//					Player player = (Player) sender;
+//		
+//					player.setWalkSpeed((float) 0.1);
+//					player.sendMessage(ChatColor.GOLD + "Your walk speed has been set to 1");
+//				}
+//				else
+//				{
+//					sender.sendMessage(ChatColor.RED + "Unkown speed setting. Type /speed help for correct usage.");
+//				}
 			
 			}
 
