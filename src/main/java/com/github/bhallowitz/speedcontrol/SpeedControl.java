@@ -26,14 +26,12 @@ public class SpeedControl extends JavaPlugin
 	
 	
 	//Enable plugin
-	@Override
 	public void onEnable()
 	{
 		logger.info("You are running Speed Control version 1.0 by bhallowitz");
 	}
 	
 	//Disable plugin
-	@Override
 	public void onDisable()
 	{
 		logger.info("Goodbye cruel world!");
