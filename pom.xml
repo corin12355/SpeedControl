@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.github.bhallowitz</groupId>
   <artifactId>SpeedControl</artifactId>
-  <version>1.0</version>
+  <version>1.1</version>
   <name>SpeedControl</name>
   <url>http://bhallowitz.github.com/</url>
   <dependencies>

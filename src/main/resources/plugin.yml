@@ -1,6 +1,14 @@
 name: SpeedControl
 main: com.github.bhallowitz.speedcontrol.SpeedControl
-version: 1.0
+version: 1.1
+description: Allows the user to change their walk/fly speed
+author: bhallowitz
+website: http://etherealcraft.com/
 commands:
     speed:
         description: Base command for the Speed Control plugin.
+permissions:
+    speedcontrol.*:
+        description: Gives access to all Speed Control commands
+        children:
+            speedcontrol.use: op

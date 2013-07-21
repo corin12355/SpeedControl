@@ -25,16 +25,18 @@ public class SpeedControl extends JavaPlugin
 	public final Logger logger = Logger.getLogger("Minecraft");
 	
 	
-	//Plugin enabled message
+	//Enable plugin
+	@Override
 	public void onEnable()
 	{
-		logger.info("Speed Control v1.0 by bhallowitz has been: ENABLED");
+		logger.info("You are running Speed Control version 1.0 by bhallowitz");
 	}
 	
-	//Plugin disabled message
+	//Disable plugin
+	@Override
 	public void onDisable()
 	{
-		logger.info("Speed Control v1.0 by bhallowitz has been: DISABLED");
+		logger.info("Goodbye cruel world!");
 	}
 	
 	//The good stuff
@@ -49,6 +51,11 @@ public class SpeedControl extends JavaPlugin
 				//If it is the console, tell them to GTFO
 				sender.sendMessage("This command is only available to players!");
 			}
+			else if(!(sender.hasPermission("speedcontrol.use"))) {
+				//
+				sender.sendMessage(ChatColor.RED + "You do not have the required permissions to preform this command!");
+			}
+			
 			//Check to make sure that the right number of arguments is given
 			else if(args.length == 0 || args.length > 1)
 			{
